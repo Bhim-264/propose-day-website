@@ -10,20 +10,28 @@
       text-align: center;
       background: linear-gradient(to right, #ffdde1, #ee9ca7);
       margin: 0;
-      padding: 50px;
-      overflow: hidden;
+      padding: 30px;
+      /* allow scrolling */
+      overflow-x: hidden;
+      overflow-y: auto;
     }
-    h1, h2 { color: #b3003b; }
+    h1, h2 {
+      color: #b3003b;
+      margin: 20px 0;
+    }
     p {
-      font-size: 20px;
+      font-size: 18px;
       color: #333;
       margin: 15px 0;
+      line-height: 1.6;
     }
     .romantic-img {
-      width: 250px;
-      margin: 20px;
+      width: 90%;              /* responsive width */
+      max-width: 300px;        /* limit size on large screens */
+      margin: 20px auto;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: block;
     }
     .heart {
       position: absolute;
@@ -35,12 +43,20 @@
       0% { transform: translateY(0) scale(1); opacity: 1; }
       100% { transform: translateY(-600px) scale(1.5); opacity: 0; }
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      body { padding: 20px; }
+      p { font-size: 16px; }
+      h1 { font-size: 22px; }
+      h2 { font-size: 18px; }
+    }
   </style>
 </head>
 <body>
 
   <h1>I knew it, you love me ❤️</h1>
-  <h2>Love you too Madam ji❤️</h2>
+  <h2>Love you too Madam ji ❤️</h2>
 
   <!-- Romantic Quotes -->
   <p>“Every love story is beautiful, but ours is my favorite.”</p>
